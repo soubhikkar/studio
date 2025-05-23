@@ -12,7 +12,11 @@ export default function HomePage() {
         <QuizClient />
       </main>
       <footer className="mt-12 text-center text-sm text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} QuizWhiz. Sharpen your mind!</p>
+        <p>
+          &copy; {new Date().getFullYear()} QuizWhiz. Sharpen your mind!
+          <br />
+          Visitor count: [count]
+        </p>
       </footer>
     </div>
   );
