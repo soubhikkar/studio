@@ -4,7 +4,7 @@ export const MATH_QUESTIONS: QuizQuestion[] = [
   {
     id: 'm1',
     subject: 'Math',
-    text: 'What is 2 + 2?',
+    text: '',
     imageUrl: '/question-images/qa1.jpeg',
     dataAiHint: 'calculation numbers',
     options: [ { id: 'm1a1', text: '3' }, { id: 'm1a2', text: '4' }, { id: 'm1a3', text: '5' }, { id: 'm1a4', text: '6' } ],

@@ -1,7 +1,10 @@
 import { QuizClient } from '@/components/quiz/QuizClient';
 import { Logo } from '@/components/Logo';
+import { getAndIncrementVisitorCount } from '@/lib/visitor-service';
 
-export default function HomePage() {
+export default async function HomePage() {
+  const visitorCount = await getAndIncrementVisitorCount();
+
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col items-center pt-8 pb-12 px-4 selection:bg-accent/30 selection:text-accent-foreground">
       <header className="mb-8 text-center">
@@ -15,7 +18,7 @@ export default function HomePage() {
         <p>
           &copy; {new Date().getFullYear()} QuizWhiz. Sharpen your mind!
           <br />
-          Visitor count: [count]
+          Visitor count: {visitorCount}
         </p>
       </footer>
     </div>
